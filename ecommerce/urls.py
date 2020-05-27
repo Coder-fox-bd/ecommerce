@@ -20,3 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('deshibazar.urls')),
 ]
+handler404 = "deshibazar.views.handler404"
+handler500 = "deshibazar.views.handler500"
