@@ -38,4 +38,4 @@ def handler404(request, exception):
 
 
 def handler500(request):
-   return render(request, 'deshibazar/error_404.html', status=500)
+   return render(request, 'deshibazar/error_500.html', status=500)
