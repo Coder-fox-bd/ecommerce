@@ -1,0 +1,249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: .\deshibazar\templates\deshibazar\base.html:252
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-14 20:51+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\deshibazar\templates\deshibazar\base.html:46
+#: .\deshibazar\templates\deshibazar\base.html:189
+msgid "item"
+msgstr "আইটেম"
+
+#: .\deshibazar\templates\deshibazar\base.html:72
+#: .\deshibazar\templates\deshibazar\base.html:151
+msgid " Login"
+msgstr " লগইন"
+
+#: .\deshibazar\templates\deshibazar\base.html:77
+#: .\deshibazar\templates\deshibazar\base.html:168
+msgid "Home"
+msgstr "হোম"
+
+#: .\deshibazar\templates\deshibazar\base.html:78
+#: .\deshibazar\templates\deshibazar\base.html:169
+msgid "Shop"
+msgstr "শপ"
+
+#: .\deshibazar\templates\deshibazar\base.html:79
+#: .\deshibazar\templates\deshibazar\base.html:170
+msgid "Pages"
+msgstr "পেজেস"
+
+#: .\deshibazar\templates\deshibazar\base.html:81
+#: .\deshibazar\templates\deshibazar\base.html:172
+msgid "Shop Details"
+msgstr "শপ ডিটেলস"
+
+#: .\deshibazar\templates\deshibazar\base.html:82
+#: .\deshibazar\templates\deshibazar\base.html:173
+msgid "Shoping Cart"
+msgstr "শপিং কার্ট"
+
+#: .\deshibazar\templates\deshibazar\base.html:83
+#: .\deshibazar\templates\deshibazar\base.html:174
+msgid "Check Out"
+msgstr "চেক আউট"
+
+#: .\deshibazar\templates\deshibazar\base.html:84
+#: .\deshibazar\templates\deshibazar\base.html:175
+msgid "Blog Details"
+msgstr "ব্লগ ডিটেলস"
+
+#: .\deshibazar\templates\deshibazar\base.html:87
+#: .\deshibazar\templates\deshibazar\base.html:178
+msgid "Blog"
+msgstr "ব্লগ"
+
+#: .\deshibazar\templates\deshibazar\base.html:88
+#: .\deshibazar\templates\deshibazar\base.html:179
+#: .\deshibazar\templates\deshibazar\base.html:353
+msgid "Contact"
+msgstr "কনটাকট"
+
+#: .\deshibazar\templates\deshibazar\base.html:101
+#: .\deshibazar\templates\deshibazar\base.html:116
+msgid "Free Shipping for all Order of ৳ 99"
+msgstr "৯৯ টাকার বাজার করলে হোম ডেলিভারি ফ্রি"
+
+#: .\deshibazar\templates\deshibazar\base.html:210
+#: .\deshibazar\templates\deshibazar\base.html:269
+msgid "All departments"
+msgstr "সকল ডিপার্টমেন্ট"
+
+#: .\deshibazar\templates\deshibazar\base.html:213
+#: .\deshibazar\templates\deshibazar\base.html:272
+msgid "Fresh Meat"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:214
+#: .\deshibazar\templates\deshibazar\base.html:273
+msgid "Vegetables"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:215
+#: .\deshibazar\templates\deshibazar\base.html:274
+msgid "Fruit & Nut Gifts"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:216
+#: .\deshibazar\templates\deshibazar\base.html:275
+msgid "Fresh Berries"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:217
+#: .\deshibazar\templates\deshibazar\base.html:276
+msgid "Ocean Foods"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:218
+#: .\deshibazar\templates\deshibazar\base.html:277
+msgid "Butter & Eggs"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:219
+#: .\deshibazar\templates\deshibazar\base.html:278
+msgid "Fastfood"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:220
+#: .\deshibazar\templates\deshibazar\base.html:279
+msgid "Fresh Onion"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:221
+#: .\deshibazar\templates\deshibazar\base.html:280
+msgid "Papayaya & Crisps"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:222
+#: .\deshibazar\templates\deshibazar\base.html:281
+msgid "Oatmeal"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:223
+#: .\deshibazar\templates\deshibazar\base.html:282
+msgid "Fresh Bananas"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:232
+#: .\deshibazar\templates\deshibazar\base.html:291
+msgid "All Categories"
+msgstr "সকল ক্যাটাগরি"
+
+#: .\deshibazar\templates\deshibazar\base.html:236
+#: .\deshibazar\templates\deshibazar\base.html:295
+msgid "SEARCH"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:245
+#: .\deshibazar\templates\deshibazar\base.html:304
+msgid "support 24/7 time"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:251
+msgid "FRUIT FRESH"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:252
+#, python-format
+msgid "100%% Organic"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:253
+msgid "Free Pickup and Delivery Available"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:254
+msgid "SHOP NOW"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:332
+msgid "Address: "
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:333
+msgid "Phone: "
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:334
+msgid "Email: "
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:340
+msgid "Useful Links"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:342
+msgid "About Us"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:343
+msgid "About Our Shop"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:344
+msgid "Secure Shopping"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:345
+msgid "Delivery infomation"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:346
+msgid "Privacy Policy"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:347
+msgid "Our Sitemap"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:350
+msgid "Who We Are"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:351
+msgid "Our Services"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:352
+msgid "Projects"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:354
+msgid "Innovation"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:355
+msgid "Testimonials"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:361
+msgid "Join Our Newsletter Now"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:362
+msgid "Get E-mail updates about our latest shop and special offers."
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:364
+msgid "Enter your mail"
+msgstr ""
+
+#: .\deshibazar\templates\deshibazar\base.html:365
+msgid "Subscribe"
+msgstr ""

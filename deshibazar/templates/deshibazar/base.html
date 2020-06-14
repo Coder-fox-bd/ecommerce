@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -14,14 +15,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="{% static '' %}css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="{% static '' %}css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="{% static '' %}css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="{% static '' %}css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="{% static '' %}css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="{% static '' %}css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="{% static '' %}css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="{% static '' %}css/style.css" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/other.css' %}" type="text/css">
 </head>
 
 <body>
@@ -41,36 +43,49 @@
                 <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
                 <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
             </ul>
-            <div class="header__cart__price">item: <span>$150.00</span></div>
+            <div class="header__cart__price">{% trans "item" %}: <span>৳ 150.00</span></div>
         </div>
         <div class="humberger__menu__widget">
             <div class="header__top__right__language">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% if LANGUAGE_CODE == "en-us" %}
                 <img src="{% static 'img/language.png' %}" alt="">
                 <div>English</div>
+                {% else %}
+                <img src="{% static 'img/language_bn.png' %}" alt="">
+                <div>বাংলা</div>
+                {% endif %}
                 <span class="arrow_carrot-down"></span>
-                <ul>
-                    <li><a href="#">Spanis</a></li>
-                    <li><a href="#">English</a></li>
-                </ul>
+                <form id="p_language_form" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <ul id="p_lanid">
+                        {% for language in languages %}
+                        <li data-value="{{ language.code }}"><a href="#">{{ language.name_local }} ({{ language.code }})</a></li>
+                        {% endfor %}
+                    </ul>
+                    <input id="p_lan_code" name="language" type="hidden">
+                </form>
             </div>
             <div class="header__top__right__auth">
-                <a href="#"><i class="fa fa-user"></i> Login</a>
+                <a href="#"><i class="fa fa-user"></i>{% trans " Login" %}</a>
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'shop' %}">Shop</a></li>
-                <li><a href="#">Pages</a>
+                <li class="active"><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                <li><a href="{% url 'shop' %}">{% trans "Shop" %}</a></li>
+                <li><a href="#">{% trans "Pages" %}</a>
                     <ul class="header__menu__dropdown">
-                        <li><a href="{% url 'item_detail' %}">Shop Details</a></li>
-                        <li><a href="{% url 'shoping_cart' %}">Shoping Cart</a></li>
-                        <li><a href="{% url 'checkout' %}">Check Out</a></li>
-                        <li><a href="{% url 'blog_details' %}">Blog Details</a></li>
+                        <li><a href="{% url 'item_detail' %}">{% trans "Shop Details" %}</a></li>
+                        <li><a href="{% url 'shoping_cart' %}">{% trans "Shoping Cart" %}</a></li>
+                        <li><a href="{% url 'checkout' %}">{% trans "Check Out" %}</a></li>
+                        <li><a href="{% url 'blog_details' %}">{% trans "Blog Details" %}</a></li>
                     </ul>
                 </li>
-                <li><a href="{% url 'blog' %}">Blog</a></li>
-                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'blog' %}">{% trans "Blog" %}</a></li>
+                <li><a href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -83,7 +98,7 @@
         <div class="humberger__menu__contact">
             <ul>
                 <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-                <li>Free Shipping for all Order of $99</li>
+                <li>{% trans "Free Shipping for all Order of ৳ 99" %}</li>
             </ul>
         </div>
     </div>
@@ -98,7 +113,7 @@
                         <div class="header__top__left">
                             <ul>
                                 <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-                                <li>Free Shipping for all Order of $99</li>
+                                <li>{% trans "Free Shipping for all Order of ৳ 99" %}</li>
                             </ul>
                         </div>
                     </div>
@@ -111,16 +126,29 @@
                                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
                             <div class="header__top__right__language">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% if LANGUAGE_CODE == "en-us" %}
                                 <img src="{% static 'img/language.png' %}" alt="">
                                 <div>English</div>
+                                {% else %}
+                                <img src="{% static 'img/language_bn.png' %}" alt="">
+                                <div>বাংলা</div>
+                                {% endif %}
                                 <span class="arrow_carrot-down"></span>
-                                <ul>
-                                    <li><a href="#">Spanis</a></li>
-                                    <li><a href="#">English</a></li>
-                                </ul>
+                                <form id="language_form" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                                    <ul id="lanid">
+                                        {% for language in languages %}
+                                        <li data-value="{{ language.code }}"><a href="#">{{ language.name_local }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                    <input id="lan_code" name="language" type="hidden">
+                                </form>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Login</a>
+                                <a href="#"><i class="fa fa-user"></i>{% trans " Login" %}</a>
                             </div>
                         </div>
                     </div>
@@ -137,18 +165,18 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="{% url 'home' %}">Home</a></li>
-                            <li><a href="{% url 'shop' %}">Shop</a></li>
-                            <li><a href="#">Pages</a>
+                            <li class="active"><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                            <li><a href="{% url 'shop' %}">{% trans "Shop" %}</a></li>
+                            <li><a href="#">{% trans "Pages" %}</a>
                                 <ul class="header__menu__dropdown">
-                                    <li><a href="{% url 'item_detail' %}">Shop Details</a></li>
-                                    <li><a href="{% url 'shoping_cart' %}">Shoping Cart</a></li>
-                                    <li><a href="{{% url 'checkout' %}">Check Out</a></li>
-                                    <li><a href="{% url 'blog_details' %}">Blog Details</a></li>
+                                    <li><a href="{% url 'item_detail' %}">{% trans "Shop Details" %}</a></li>
+                                    <li><a href="{% url 'shoping_cart' %}">{% trans "Shoping Cart" %}</a></li>
+                                    <li><a href="{% url 'checkout' %}">{% trans "Check Out" %}</a></li>
+                                    <li><a href="{% url 'blog_details' %}">{% trans "Blog Details" %}</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{% url 'blog' %}">Blog</a></li>
-                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                            <li><a href="{% url 'blog' %}">{% trans "Blog" %}</a></li>
+                            <li><a href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -158,7 +186,7 @@
                             <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
                             <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
                         </ul>
-                        <div class="header__cart__price">item: <span>$150.00</span></div>
+                        <div class="header__cart__price">{% trans "item" %}: <span>৳ 150.00</span></div>
                     </div>
                 </div>
             </div>
@@ -179,20 +207,20 @@
                         <div class="hero__categories">
                             <div class="hero__categories__all">
                                 <i class="fa fa-bars"></i>
-                                <span>All departments</span>
+                                <span>{% trans "All departments" %}</span>
                             </div>
                             <ul>
-                                <li><a href="#">Fresh Meat</a></li>
-                                <li><a href="#">Vegetables</a></li>
-                                <li><a href="#">Fruit & Nut Gifts</a></li>
-                                <li><a href="#">Fresh Berries</a></li>
-                                <li><a href="#">Ocean Foods</a></li>
-                                <li><a href="#">Butter & Eggs</a></li>
-                                <li><a href="#">Fastfood</a></li>
-                                <li><a href="#">Fresh Onion</a></li>
-                                <li><a href="#">Papayaya & Crisps</a></li>
-                                <li><a href="#">Oatmeal</a></li>
-                                <li><a href="#">Fresh Bananas</a></li>
+                                <li><a href="#">{% trans "Fresh Meat" %}</a></li>
+                                <li><a href="#">{% trans "Vegetables" %}</a></li>
+                                <li><a href="#">{% trans "Fruit & Nut Gifts" %}</a></li>
+                                <li><a href="#">{% trans "Fresh Berries" %}</a></li>
+                                <li><a href="#">{% trans "Ocean Foods" %}</a></li>
+                                <li><a href="#">{% trans "Butter & Eggs" %}</a></li>
+                                <li><a href="#">{% trans "Fastfood" %}</a></li>
+                                <li><a href="#">{% trans "Fresh Onion" %}</a></li>
+                                <li><a href="#">{% trans "Papayaya & Crisps" %}</a></li>
+                                <li><a href="#">{% trans "Oatmeal" %}</a></li>
+                                <li><a href="#">{% trans "Fresh Bananas" %}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -201,11 +229,11 @@
                             <div class="hero__search__form">
                                 <form action="#">
                                     <div class="hero__search__categories">
-                                        All Categories
+                                        {% trans "All Categories" %}
                                         <span class="arrow_carrot-down"></span>
                                     </div>
                                     <input type="text" placeholder="What do yo u need?">
-                                    <button type="submit" class="site-btn">SEARCH</button>
+                                    <button type="submit" class="site-btn">{% trans "SEARCH" %}</button>
                                 </form>
                             </div>
                             <div class="hero__search__phone">
@@ -214,16 +242,16 @@
                                 </div>
                                 <div class="hero__search__phone__text">
                                     <h5>+65 11.188.888</h5>
-                                    <span>support 24/7 time</span>
+                                    <span>{% trans "support 24/7 time" %}</span>
                                 </div>
                             </div>
                         </div>
                         <div class="hero__item set-bg" data-setbg="{% static 'img/hero/banner.jpg'%}">
                             <div class="hero__text">
-                                <span>FRUIT FRESH</span>
-                                <h2>Vegetable <br />100% Organic</h2>
-                                <p>Free Pickup and Delivery Available</p>
-                                <a href="#" class="primary-btn">SHOP NOW</a>
+                                <span>{% trans "FRUIT FRESH" %}</span>
+                                <h2>{% trans "" %}Vegetable <br />{% trans "100% Organic" %}</h2>
+                                <p>{% trans "Free Pickup and Delivery Available" %}</p>
+                                <a href="#" class="primary-btn">{% trans "SHOP NOW" %}</a>
                             </div>
                         </div>
                     </div>
@@ -238,20 +266,20 @@
                         <div class="hero__categories">
                             <div class="hero__categories__all">
                                 <i class="fa fa-bars"></i>
-                                <span>All departments</span>
+                                <span>{% trans "All departments" %}</span>
                             </div>
                             <ul>
-                                <li><a href="#">Fresh Meat</a></li>
-                                <li><a href="#">Vegetables</a></li>
-                                <li><a href="#">Fruit & Nut Gifts</a></li>
-                                <li><a href="#">Fresh Berries</a></li>
-                                <li><a href="#">Ocean Foods</a></li>
-                                <li><a href="#">Butter & Eggs</a></li>
-                                <li><a href="#">Fastfood</a></li>
-                                <li><a href="#">Fresh Onion</a></li>
-                                <li><a href="#">Papayaya & Crisps</a></li>
-                                <li><a href="#">Oatmeal</a></li>
-                                <li><a href="#">Fresh Bananas</a></li>
+                                <li><a href="#">{% trans "Fresh Meat" %}</a></li>
+                                <li><a href="#">{% trans "Vegetables" %}</a></li>
+                                <li><a href="#">{% trans "Fruit & Nut Gifts" %}</a></li>
+                                <li><a href="#">{% trans "Fresh Berries" %}</a></li>
+                                <li><a href="#">{% trans "Ocean Foods" %}</a></li>
+                                <li><a href="#">{% trans "Butter & Eggs" %}</a></li>
+                                <li><a href="#">{% trans "Fastfood" %}</a></li>
+                                <li><a href="#">{% trans "Fresh Onion" %}</a></li>
+                                <li><a href="#">{% trans "Papayaya & Crisps" %}</a></li>
+                                <li><a href="#">{% trans "Oatmeal" %}</a></li>
+                                <li><a href="#">{% trans "Fresh Bananas" %}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -260,11 +288,11 @@
                             <div class="hero__search__form">
                                 <form action="#">
                                     <div class="hero__search__categories">
-                                        All Categories
+                                        {% trans "All Categories" %}
                                         <span class="arrow_carrot-down"></span>
                                     </div>
                                     <input type="text" placeholder="What do yo u need?">
-                                    <button type="submit" class="site-btn">SEARCH</button>
+                                    <button type="submit" class="site-btn">{% trans "SEARCH" %}</button>
                                 </form>
                             </div>
                             <div class="hero__search__phone">
@@ -273,7 +301,7 @@
                                 </div>
                                 <div class="hero__search__phone__text">
                                     <h5>+65 11.188.888</h5>
-                                    <span>support 24/7 time</span>
+                                    <span>{% trans "support 24/7 time" %}</span>
                                 </div>
                             </div>
                         </div>
@@ -288,7 +316,7 @@
     <!--Page content Begin-->
     {% block content %}
     
-    {% endblock %}}
+    {% endblock %}
     <!--Page content End-->
 
     <!-- Footer Section Begin -->
@@ -301,40 +329,40 @@
                             <a href="./index.html"><img src="{% static 'img/logo.png' %}" alt=""></a>
                         </div>
                         <ul>
-                            <li>Address: 60-49 Road 11378 New York</li>
-                            <li>Phone: +65 11.188.888</li>
-                            <li>Email: hello@colorlib.com</li>
+                            <li>{% trans "Address: " %}60-49 Road 11378 New York</li>
+                            <li>{% trans "Phone: " %}+65 11.188.888</li>
+                            <li>{% trans "Email: " %}hello@colorlib.com</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
                     <div class="footer__widget">
-                        <h6>Useful Links</h6>
+                        <h6>{% trans "Useful Links" %}</h6>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">About Our Shop</a></li>
-                            <li><a href="#">Secure Shopping</a></li>
-                            <li><a href="#">Delivery infomation</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Our Sitemap</a></li>
+                            <li><a href="#">{% trans "About Us" %}</a></li>
+                            <li><a href="#">{% trans "About Our Shop" %}</a></li>
+                            <li><a href="#">{% trans "Secure Shopping" %}</a></li>
+                            <li><a href="#">{% trans "Delivery infomation" %}</a></li>
+                            <li><a href="#">{% trans "Privacy Policy" %}</a></li>
+                            <li><a href="#">{% trans "Our Sitemap" %}</a></li>
                         </ul>
                         <ul>
-                            <li><a href="#">Who We Are</a></li>
-                            <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Innovation</a></li>
-                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">{% trans "Who We Are" %}</a></li>
+                            <li><a href="#">{% trans "Our Services" %}</a></li>
+                            <li><a href="#">{% trans "Projects" %}</a></li>
+                            <li><a href="#">{% trans "Contact" %}</a></li>
+                            <li><a href="#">{% trans "Innovation" %}</a></li>
+                            <li><a href="#">{% trans "Testimonials" %}</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <div class="footer__widget">
-                        <h6>Join Our Newsletter Now</h6>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <h6>{% trans "Join Our Newsletter Now" %}</h6>
+                        <p>{% trans "Get E-mail updates about our latest shop and special offers." %}</p>
                         <form action="#">
-                            <input type="text" placeholder="Enter your mail">
-                            <button type="submit" class="site-btn">Subscribe</button>
+                            <input type="text" placeholder="{% trans 'Enter your mail' %}">
+                            <button type="submit" class="site-btn">{% trans "Subscribe" %}</button>
                         </form>
                         <div class="footer__widget__social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -369,6 +397,24 @@
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
 
+    <script>
+        $('#lanid').on("click", "a", function (e) {
+            e.preventDefault();
+            var $this = $(this).parent();
+            $this.addClass("select").siblings().removeClass("select");
+            $("#lan_code").val($this.data("value"));
+            $("#language_form").submit()  
+            });
+    </script>
+    <script>
+        $('#p_lanid').on("click", "a", function (e) {
+            e.preventDefault();
+            var $this = $(this).parent();
+            $this.addClass("select").siblings().removeClass("select");
+            $("#p_lan_code").val($this.data("value"));
+            $("#p_language_form").submit()
+        });
+    </script>
 
 
 </body>
