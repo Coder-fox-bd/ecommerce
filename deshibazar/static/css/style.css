@@ -1658,10 +1658,10 @@ ol {
 /*---------------------
   Shop Details
 -----------------------*/
-
+/* 
 .product-details {
 	padding-top: 80px;
-}
+} */
 
 .product__details__pic__item {
 	margin-bottom: 20px;
@@ -2641,6 +2641,7 @@ ol {
 .footer__widget {
 	margin-bottom: 30px;
 	overflow: hidden;
+	padding-top: 2px;
 }
 
 .footer__widget h6 {

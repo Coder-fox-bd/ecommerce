@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %} {% endblock %}</title>
-
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
@@ -24,6 +23,9 @@
     <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/other.css' %}" type="text/css">
+    {% block css %}
+
+    {% endblock %}
 </head>
 
 <body>
@@ -232,7 +234,7 @@
                                         {% trans "All Categories" %}
                                         <span class="arrow_carrot-down"></span>
                                     </div>
-                                    <input type="text" placeholder="What do yo u need?">
+                                    <input type="text" placeholder="{% trans 'What do yo u need?' %}">
                                     <button type="submit" class="site-btn">{% trans "SEARCH" %}</button>
                                 </form>
                             </div>
@@ -249,7 +251,7 @@
                         <div class="hero__item set-bg" data-setbg="{% static 'img/hero/banner.jpg'%}">
                             <div class="hero__text">
                                 <span>{% trans "FRUIT FRESH" %}</span>
-                                <h2>{% trans "" %}Vegetable <br />{% trans "100% Organic" %}</h2>
+                                <h2>{% trans "Vegetables" %} <br />{% blocktrans with percent="%" %}100{{percent}} Organic{% endblocktrans %}</h2>
                                 <p>{% trans "Free Pickup and Delivery Available" %}</p>
                                 <a href="#" class="primary-btn">{% trans "SHOP NOW" %}</a>
                             </div>
@@ -291,7 +293,7 @@
                                         {% trans "All Categories" %}
                                         <span class="arrow_carrot-down"></span>
                                     </div>
-                                    <input type="text" placeholder="What do yo u need?">
+                                    <input type="text" placeholder="{% trans 'What do yo u need?' %}">
                                     <button type="submit" class="site-btn">{% trans "SEARCH" %}</button>
                                 </form>
                             </div>
@@ -386,7 +388,6 @@
         </div>
     </footer>
     <!-- Footer Section End -->
-
     <!-- Js Plugins -->
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
@@ -396,7 +397,9 @@
     <script src="{% static 'js/mixitup.min.js' %}"></script>
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
-
+    {% block js %}
+    
+    {% endblock js %}
     <script>
         $('#lanid').on("click", "a", function (e) {
             e.preventDefault();
@@ -415,8 +418,6 @@
             $("#p_language_form").submit()
         });
     </script>
-
-
 </body>
 
 </html>

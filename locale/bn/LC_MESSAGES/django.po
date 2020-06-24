@@ -3,13 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: .\deshibazar\templates\deshibazar\base.html:252
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-14 20:51+0600\n"
+"POT-Creation-Date: 2020-06-15 16:15+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,162 +87,168 @@ msgstr "সকল ডিপার্টমেন্ট"
 #: .\deshibazar\templates\deshibazar\base.html:213
 #: .\deshibazar\templates\deshibazar\base.html:272
 msgid "Fresh Meat"
-msgstr ""
+msgstr "ফ্রেস মাংস"
 
 #: .\deshibazar\templates\deshibazar\base.html:214
+#: .\deshibazar\templates\deshibazar\base.html:252
 #: .\deshibazar\templates\deshibazar\base.html:273
 msgid "Vegetables"
-msgstr ""
+msgstr "শাকসবজি"
 
 #: .\deshibazar\templates\deshibazar\base.html:215
 #: .\deshibazar\templates\deshibazar\base.html:274
 msgid "Fruit & Nut Gifts"
-msgstr ""
+msgstr "ফল ও বাদাম উপহার"
 
 #: .\deshibazar\templates\deshibazar\base.html:216
 #: .\deshibazar\templates\deshibazar\base.html:275
 msgid "Fresh Berries"
-msgstr ""
+msgstr " ফ্রেস বেরি"
 
 #: .\deshibazar\templates\deshibazar\base.html:217
 #: .\deshibazar\templates\deshibazar\base.html:276
 msgid "Ocean Foods"
-msgstr ""
+msgstr "সামুদ্রিক খাবার"
 
 #: .\deshibazar\templates\deshibazar\base.html:218
 #: .\deshibazar\templates\deshibazar\base.html:277
 msgid "Butter & Eggs"
-msgstr ""
+msgstr "মাখন ও ডিম"
 
 #: .\deshibazar\templates\deshibazar\base.html:219
 #: .\deshibazar\templates\deshibazar\base.html:278
 msgid "Fastfood"
-msgstr ""
+msgstr "ফাস্টফুড"
 
 #: .\deshibazar\templates\deshibazar\base.html:220
 #: .\deshibazar\templates\deshibazar\base.html:279
 msgid "Fresh Onion"
-msgstr ""
+msgstr "টাটকা পেঁয়াজ"
 
 #: .\deshibazar\templates\deshibazar\base.html:221
 #: .\deshibazar\templates\deshibazar\base.html:280
 msgid "Papayaya & Crisps"
-msgstr ""
+msgstr "পেঁপে এবং ক্রিস্পস"
 
 #: .\deshibazar\templates\deshibazar\base.html:222
 #: .\deshibazar\templates\deshibazar\base.html:281
 msgid "Oatmeal"
-msgstr ""
+msgstr "ওটমিল"
 
 #: .\deshibazar\templates\deshibazar\base.html:223
 #: .\deshibazar\templates\deshibazar\base.html:282
 msgid "Fresh Bananas"
-msgstr ""
+msgstr "টাটকা কলা"
 
 #: .\deshibazar\templates\deshibazar\base.html:232
 #: .\deshibazar\templates\deshibazar\base.html:291
 msgid "All Categories"
 msgstr "সকল ক্যাটাগরি"
 
+#: .\deshibazar\templates\deshibazar\base.html:235
+#: .\deshibazar\templates\deshibazar\base.html:294
+msgid "What do yo u need?"
+msgstr "আপনার কি প্রয়োজন?"
+
 #: .\deshibazar\templates\deshibazar\base.html:236
 #: .\deshibazar\templates\deshibazar\base.html:295
 msgid "SEARCH"
-msgstr ""
+msgstr "অনুসন্ধান"
 
 #: .\deshibazar\templates\deshibazar\base.html:245
 #: .\deshibazar\templates\deshibazar\base.html:304
 msgid "support 24/7 time"
-msgstr ""
+msgstr "দিন রাত ২৪ ঘন্টা সাপোর্ট"
 
 #: .\deshibazar\templates\deshibazar\base.html:251
 msgid "FRUIT FRESH"
-msgstr ""
+msgstr "টাটকা ফল"
 
 #: .\deshibazar\templates\deshibazar\base.html:252
 #, python-format
-msgid "100%% Organic"
-msgstr ""
+msgid "100%(percent)s Organic"
+msgstr "১০০%(percent)s প্রাকৃতিক"
 
 #: .\deshibazar\templates\deshibazar\base.html:253
 msgid "Free Pickup and Delivery Available"
-msgstr ""
+msgstr "ফ্রি পিকআপ এবং ডেলিভারি এভেইলএবল"
 
 #: .\deshibazar\templates\deshibazar\base.html:254
 msgid "SHOP NOW"
-msgstr ""
+msgstr "এখনই কিনুন"
 
 #: .\deshibazar\templates\deshibazar\base.html:332
 msgid "Address: "
-msgstr ""
+msgstr "ঠিকানা: "
 
 #: .\deshibazar\templates\deshibazar\base.html:333
 msgid "Phone: "
-msgstr ""
+msgstr "ফোন: "
 
 #: .\deshibazar\templates\deshibazar\base.html:334
 msgid "Email: "
-msgstr ""
+msgstr "ইমেইল: "
 
 #: .\deshibazar\templates\deshibazar\base.html:340
 msgid "Useful Links"
-msgstr ""
+msgstr "দরকারী লিংক"
 
 #: .\deshibazar\templates\deshibazar\base.html:342
 msgid "About Us"
-msgstr ""
+msgstr "আমাদের সম্পর্কে"
 
 #: .\deshibazar\templates\deshibazar\base.html:343
 msgid "About Our Shop"
-msgstr ""
+msgstr "আমাদের দোকান সম্পর্কে"
 
 #: .\deshibazar\templates\deshibazar\base.html:344
 msgid "Secure Shopping"
-msgstr ""
+msgstr "সিকিউর শপিং"
 
 #: .\deshibazar\templates\deshibazar\base.html:345
 msgid "Delivery infomation"
-msgstr ""
+msgstr "ডেলিভারি তথ্য"
 
 #: .\deshibazar\templates\deshibazar\base.html:346
 msgid "Privacy Policy"
-msgstr ""
+msgstr "প্রাইবেসি পলিসি"
 
 #: .\deshibazar\templates\deshibazar\base.html:347
 msgid "Our Sitemap"
-msgstr ""
+msgstr "আমাদের সাইটম্যাপ"
 
 #: .\deshibazar\templates\deshibazar\base.html:350
 msgid "Who We Are"
-msgstr ""
+msgstr "আমরা কে"
 
 #: .\deshibazar\templates\deshibazar\base.html:351
 msgid "Our Services"
-msgstr ""
+msgstr "আমাদের সেবাসমূহ"
 
 #: .\deshibazar\templates\deshibazar\base.html:352
 msgid "Projects"
-msgstr ""
+msgstr "প্রকল্পসমূহ"
 
 #: .\deshibazar\templates\deshibazar\base.html:354
 msgid "Innovation"
-msgstr ""
+msgstr "উদ্ভাবন"
 
 #: .\deshibazar\templates\deshibazar\base.html:355
 msgid "Testimonials"
-msgstr ""
+msgstr "টেস্টিমোনিয়াল"
 
 #: .\deshibazar\templates\deshibazar\base.html:361
 msgid "Join Our Newsletter Now"
-msgstr ""
+msgstr "আমাদের নিউজলেটারে এখনই যোগ দিন"
 
 #: .\deshibazar\templates\deshibazar\base.html:362
 msgid "Get E-mail updates about our latest shop and special offers."
-msgstr ""
+msgstr "আমাদের শপ এবং বিশেষ অফার সম্পর্কে ই-মেইল আপডেট পাবেন"
 
 #: .\deshibazar\templates\deshibazar\base.html:364
 msgid "Enter your mail"
-msgstr ""
+msgstr "আপনার মেইল প্রবেশ করান"
 
 #: .\deshibazar\templates\deshibazar\base.html:365
 msgid "Subscribe"
-msgstr ""
+msgstr "সাবস্ক্রাইপ"

@@ -2,46 +2,30 @@
 {% block title %}Shop Details{% endblock %}
 {% load static %}
 {% load i18n %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/starrate.css' %}">
+{% endblock %}
 
 {% block content %}
-<!-- Breadcrumb Section Begin -->
-<section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="breadcrumb__text">
-                    <h2>Vegetable’s Package</h2>
-                    <div class="breadcrumb__option">
-                        <a href="./index.html">Home</a>
-                        <a href="./index.html">Vegetables</a>
-                        <span>Vegetable’s Package</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Breadcrumb Section End -->
-
 <!-- Product Details Section Begin -->
-<section class="product-details spad">
+<section class="product-details">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="product__details__pic">
                     <div class="product__details__pic__item">
-                        <img class="product__details__pic__item--large" src="img/product/details/product-details-1.jpg"
+                        <img class="product__details__pic__item--large" src="{% static 'img/product/details/product-details-1.jpg' %}"
                             alt="">
                     </div>
                     <div class="product__details__pic__slider owl-carousel">
-                        <img data-imgbigurl="img/product/details/product-details-2.jpg"
-                            src="img/product/details/thumb-1.jpg" alt="">
-                        <img data-imgbigurl="img/product/details/product-details-3.jpg"
-                            src="img/product/details/thumb-2.jpg" alt="">
-                        <img data-imgbigurl="img/product/details/product-details-5.jpg"
-                            src="img/product/details/thumb-3.jpg" alt="">
-                        <img data-imgbigurl="img/product/details/product-details-4.jpg"
-                            src="img/product/details/thumb-4.jpg" alt="">
+                        <img data-imgbigurl="{% static 'img/product/details/product-details-2.jpg' %}"
+                            src="{% static 'img/product/details/thumb-1.jpg' %}" alt="">
+                        <img data-imgbigurl="{% static 'img/product/details/product-details-3.jpg' %}"
+                            src="{% static 'img/product/details/thumb-2.jpg' %}" alt="">
+                        <img data-imgbigurl="{% static 'img/product/details/product-details-5.jpg' %}"
+                            src="{% static 'img/product/details/thumb-3.jpg' %}" alt="">
+                        <img data-imgbigurl="{% static 'img/product/details/product-details-4.jpg' %}"
+                            src="{% static 'img/product/details/thumb-4.jpg' %}" alt="">
                     </div>
                 </div>
             </div>
@@ -152,7 +136,11 @@
                                 <!-- Rating section end -->
 
                                 <!-- comment section start -->
-
+                                    <div class="container">
+                                        <input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step="0.1"
+                                            value="2">
+                                    </div>
+                                    Tins is a comment
                                 <!-- comment section end -->
                             </div>
                         </div>
@@ -239,4 +227,8 @@
     </div>
 </section>
 <!-- Related Product Section End -->
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'js/starrate.js' %}"></script>
 {% endblock %}

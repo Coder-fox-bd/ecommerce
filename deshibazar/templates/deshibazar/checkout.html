@@ -2,9 +2,11 @@
 {% block title %}Checkout{% endblock %}
 {% load static %}
 {% load i18n %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'leaflet/leaflet.css' %}" type="text/css">
+{% endblock %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'leaflet/leaflet.css' %}" type="text/css">
 <style>
       #map {
         float: left;
@@ -200,6 +202,8 @@
         </div>
     </section>
     <!-- Checkout Section End -->
+{% endblock %}
+{% block js %}
     <script src="{% static 'leaflet/leaflet.js' %}"></script>
     <script src="{% static 'leaflet/map.js' %}"></script>
 {% endblock %}
