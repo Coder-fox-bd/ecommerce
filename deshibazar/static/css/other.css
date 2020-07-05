@@ -1,3 +1,72 @@
 .card-inner{
-    margin-left: 4rem;
+    margin-left: 1rem;
+}
+/* Star Rating */
+.containerdiv {
+  border: 0;
+  float: right;
+  position: relative;
+  width: 80px;
+} 
+.cornerimage {
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+ } 
+ .img{
+   max-width: 80px;
+ }
+ /* End Star Rating */
+
+ /* Total Review star rating */
+.reviewdiv {
+  border: 0;
+  float: left;
+  position: relative;
+  width: 80px;
+} 
+.reviewcornerimage {
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+ }
+ /* End review Star Rating */
+
+ /* Avarage rating */
+ .btn-grey{
+    background-color:#D8D8D8;
+	color:#FFF;
+}
+.rating-block{
+	background-color:#FAFAFA;
+	border:1px solid #EFEFEF;
+	padding:15px 15px 20px 15px;
+	border-radius:3px;
+}
+.bold{
+	font-weight:700;
+}
+.padding-bottom-7{
+	padding-bottom:7px;
+}
+
+/* vertical center */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Some change */
+.contact-form {
+    padding-top: 20px;
+}
+
+.spad {
+    padding-top: 30px;
 }
